@@ -2,7 +2,7 @@ package main
 
 import(
 	"github.com/Trafle/event_loop_realization/engine"
-	"github.com/Trafle/event_loop_realization/commands"
+	"../commands"
 	"os"
 	"bufio"
 	"strings"
@@ -31,7 +31,7 @@ func main () {
 	eventLoop := new(engine.EventLoop)
 	eventLoop.Start()
 	
-	inputFile := "github.com/Trafle/event_loop_realization/cmd/example/example"
+	inputFile := "./cmd/example/example"
 	input, err := os.Open(inputFile)
 	if err != nil {
 		log.Fatal(err)
